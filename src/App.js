@@ -1,7 +1,9 @@
 import React from 'react';
 import { fetchSpells } from './services/fetchSpells';
+import CardList from './Components/CardList';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import './App.scss';
+
 
 class App extends React.Component{
   constructor(props){
@@ -24,12 +26,16 @@ class App extends React.Component{
 
   }
   render(){
+    const {spells} = this.state;
     return(
     <div className="App">
-      {/*<CircularProgress color="secondary" />*/}
       <header className="App-header">
         holaa
       </header>
+      {spells ?
+      <CardList spells={spells}></CardList>
+         : 
+      <CircularProgress color="secondary" />}
     </div>
     );
   }
