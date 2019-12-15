@@ -1,16 +1,38 @@
 import React from 'react';
+import { fetchSpells } from './services/fetchSpells';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import './App.scss';
 
-function App() {
-  return (
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+      spells:null
+    }
+    this.getSpells = this.getSpells.bind(this);
+  }
+  componentDidMount(){
+    this.getSpells();
+  }
+  getSpells(){
+    fetchSpells('https://www.potterapi.com/v1/spells?key=$2a$10$W4Y/r9zaxMfJVdSv/V9U3.6ETMSveALxjAQy9duMzjpaISSQbU8ty')
+    .then(data=>{
+      this.setState({
+        spells:data
+      })
+    })
+
+  }
+  render(){
+    return(
     <div className="App">
       {/*<CircularProgress color="secondary" />*/}
       <header className="App-header">
         holaa
       </header>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
