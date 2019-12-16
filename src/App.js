@@ -12,7 +12,7 @@ class App extends React.Component{
     super(props);
     this.state={
       spells:null,
-      inputSpell:null
+      inputSpell:''
     }
     this.getSpells = this.getSpells.bind(this);
     this.getInputSpell = this.getInputSpell.bind(this);
