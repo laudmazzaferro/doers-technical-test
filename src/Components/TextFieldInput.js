@@ -16,7 +16,7 @@ class TextFieldInput extends React.Component {
   render(){
   return (
     <form   noValidate autoComplete="off" className="Text__form">
-      <TextField className="Text__form" id="filled-basic" label="Search spell" variant="filled" onChange={this.getInputValue}  />
+      <TextField className="Text__field" id="filled-basic" label="Search spell" variant="filled" onChange={this.getInputValue}  />
     </form>
   );
   }

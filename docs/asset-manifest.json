@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "./static/css/main.99fc9a99.chunk.css",
+    "main.js": "./static/js/main.dff5afee.chunk.js",
+    "main.js.map": "./static/js/main.dff5afee.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.4fbccdca.js",
+    "runtime-main.js.map": "./static/js/runtime-main.4fbccdca.js.map",
+    "static/js/2.d289e27c.chunk.js": "./static/js/2.d289e27c.chunk.js",
+    "static/js/2.d289e27c.chunk.js.map": "./static/js/2.d289e27c.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.a131fddf975999a84b00f0a8c77cb6ef.js": "./precache-manifest.a131fddf975999a84b00f0a8c77cb6ef.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.99fc9a99.chunk.css.map": "./static/css/main.99fc9a99.chunk.css.map",
+    "static/js/2.d289e27c.chunk.js.LICENSE": "./static/js/2.d289e27c.chunk.js.LICENSE",
+    "static/media/App.scss": "./static/media/harry-potter-logo.17325e98.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4fbccdca.js",
+    "static/js/2.d289e27c.chunk.js",
+    "static/css/main.99fc9a99.chunk.css",
+    "static/js/main.dff5afee.chunk.js"
+  ]
+}
