@@ -1,18 +1,21 @@
 import React from 'react';
 import { fetchSpells } from './services/fetchSpells';
+import TextFieldInput from './Components/TextFieldInput';
 import CardList from './Components/CardList';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import './App.scss';
-import TextFieldInput from './Components/TextFieldInput';
+
 
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      spells:null
+      spells:null,
+      inputSpell:null
     }
     this.getSpells = this.getSpells.bind(this);
+    this.getInputSpell = this.getInputSpell.bind(this);
   }
   componentDidMount(){
     this.getSpells();
@@ -24,10 +27,16 @@ class App extends React.Component{
         spells:data
       })
     })
-
   }
+
+  getInputSpell(value){
+    this.setState({
+      inputSpell:value
+    })
+  };
+
   render(){
-    const {spells} = this.state;
+    const {spells , inputSpell} = this.state;
     return(
     <div className="App">
       <header className="App-header">
@@ -35,8 +44,8 @@ class App extends React.Component{
       </header>
       {spells ?
       <div>
-      <TextFieldInput></TextFieldInput>
-      <CardList spells={spells}></CardList>
+      <TextFieldInput getInputSpell={this.getInputSpell}></TextFieldInput>
+      <CardList spells={spells} inputSpell={inputSpell}></CardList>
       </div>
          : 
       <CircularProgress color="secondary" />}

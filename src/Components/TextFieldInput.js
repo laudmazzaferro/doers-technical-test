@@ -1,22 +1,24 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: 600,
-    },
-  },
-}));
+class TextFieldInput extends React.Component {
+  constructor(props){
+    super(props);
+    this.getInputValue= this.getInputValue.bind(this);
+  }
 
-export default function TextFieldInput() {
-  const classes = useStyles();
+  getInputValue(event){
+    const {value}= event.currentTarget
+    this.props.getInputSpell(value)
+  }
 
+  render(){
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="filled-basic" label="Search spell" variant="filled" />
+    <form   noValidate autoComplete="off">
+      <TextField id="filled-basic" label="Search spell" variant="filled" onChange={this.getInputValue}  />
     </form>
   );
+  }
 }
+
+export default  TextFieldInput ;
