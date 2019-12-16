@@ -39,16 +39,19 @@ class App extends React.Component{
     const {spells , inputSpell} = this.state;
     return(
     <div className="App">
-      <header className="App-header">
-        holaa
-      </header>
+        <header className="app_header">
+          <h1 className="app__title">Harry Potter's Spells</h1>
+        </header>
       {spells ?
-      <div>
+      <div className="app_main">
       <TextFieldInput getInputSpell={this.getInputSpell}></TextFieldInput>
       <CardList spells={spells} inputSpell={inputSpell}></CardList>
-      </div>
+      </div >
          : 
-      <CircularProgress color="secondary" />}
+      <div className="app_main">
+      <CircularProgress className="circular__progress" color="primary" />
+      </div>
+      }
     </div>
     );
   }
