@@ -3,6 +3,7 @@ import { fetchSpells } from './services/fetchSpells';
 import CardList from './Components/CardList';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import './App.scss';
+import TextFieldInput from './Components/TextFieldInput';
 
 
 class App extends React.Component{
@@ -33,7 +34,10 @@ class App extends React.Component{
         holaa
       </header>
       {spells ?
+      <div>
+      <TextFieldInput></TextFieldInput>
       <CardList spells={spells}></CardList>
+      </div>
          : 
       <CircularProgress color="secondary" />}
     </div>
